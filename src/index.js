@@ -32,12 +32,18 @@ var aboutAnchor = document.createElement("a");
 aboutAnchor.innerText = "About";
 aboutAnchor.style.textDecoration = "underline";
 aboutAnchor.style.color = "white";
+aboutAnchor.style.marginLeft = "1em";
 // add nav children
 nav.appendChild(homeAnchor);
 nav.appendChild(aboutAnchor);
 // nav styles
 headerH2.style.marginLeft = "1em";
+nav.style.padding = "0 2em 0 2em";
 nav.style.marginRight = "1em";
+nav.style.display = "flex";
+nav.style.flexDirection = "row";
+nav.style.justifyContent = "space-evenly";
+nav.style.alignItems = "center";
 // add children of header element
 header.appendChild(headerH2);
 header.appendChild(nav);
