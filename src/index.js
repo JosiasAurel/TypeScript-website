@@ -84,6 +84,27 @@ main.appendChild(mainP);
 main.appendChild(mainH2);
 // add main element to mainSection
 mainSection.appendChild(main);
+var techSection = document.createElement("section");
+var techCard = document.createElement("div");
+techCard.style.display = "flex";
+techCard.style.alignItems = "center";
+techCard.style.backgroundColor = "#9319d86e";
+techCard.style.borderRadius = "6px";
+techCard.style.maxWidth = "250px";
+// children of techCard
+var span = document.createElement("span");
+// spanChild
+var spanH2 = document.createElement("h2");
+spanH2.innerText = "TS";
+var techP = document.createElement("p");
+techP.innerText = "TypeScript";
+techP.style.margin = "0 0 0 1em";
+span.appendChild(spanH2);
+techCard.appendChild(span);
+techCard.appendChild(techP);
+// children of tech section
+techSection.appendChild(techCard);
 // adding the created elements as children of body or so
 body.appendChild(header);
 body.appendChild(mainSection);
+body.appendChild(techSection);
