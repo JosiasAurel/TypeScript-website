@@ -76,8 +76,12 @@ mainP.innerText = "This website is written entirely in TypeScript and compiled t
 mainP.style.fontSize = "2em";
 mainP.style.textAlign = "center";
 var mainH2 = document.createElement("h2");
+mainH2.innerText = "This is really nice !!";
+mainH2.style.fontSize = "5em";
+mainH2.style.textAlign = "center";
 main.appendChild(mainH1);
 main.appendChild(mainP);
+main.appendChild(mainH2);
 // add main element to mainSection
 mainSection.appendChild(main);
 // adding the created elements as children of body or so

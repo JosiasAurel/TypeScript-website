@@ -103,9 +103,13 @@ mainP.style.fontSize = "2em";
 mainP.style.textAlign = "center";
 
 let mainH2: HTMLHeadingElement = document.createElement("h2");
+mainH2.innerText = "This is really nice !!";
+mainH2.style.fontSize = "5em";
+mainH2.style.textAlign = "center";
 
 main.appendChild(mainH1);
 main.appendChild(mainP);
+main.appendChild(mainH2);
 
 // add main element to mainSection
 mainSection.appendChild(main);
