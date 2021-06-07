@@ -74,10 +74,44 @@ header.style.flexDirection = "row";
 header.style.justifyContent = "space-between";
 header.style.alignItems = "center";
 
+let mainSection: HTMLElement = document.createElement("section");
+mainSection.style.display = "flex";
+mainSection.style.flexDirection = "column";
+mainSection.style.justifyContent = "center";
+mainSection.style.alignItems = "center";
+
+// main presentation on the body
+
+let main: HTMLElement = document.createElement("main");
+main.style.display = "flex";
+main.style.flexDirection = "column";
+main.style.justifyContent = "space-evenly";
+main.style.alignItems = "center";
+main.style.margin = "4em 0 0 0";
+main.style.maxWidth = "600px";
+
+// main children
+
+
+let mainH1: HTMLHeadingElement = document.createElement("h1");
+mainH1.innerText = "TypeScript Rocks!!";
+mainH1.style.textAlign = "center";
+
+let mainP: HTMLParagraphElement = document.createElement("p");
+mainP.innerText = "This website is written entirely in TypeScript and compiled to JavaScript."
+mainP.style.fontSize = "2em";
+mainP.style.textAlign = "center";
+
+let mainH2: HTMLHeadingElement = document.createElement("h2");
+
+main.appendChild(mainH1);
+main.appendChild(mainP);
+
+// add main element to mainSection
+mainSection.appendChild(main);
+
 // adding the created elements as children of body or so
 body.appendChild(header);
+body.appendChild(mainSection);
 
 
-/* import { createAndSetStyles } from "./utils";
-
-console.log(createAndSetStyles(undefined, `hello world, it works`)) */

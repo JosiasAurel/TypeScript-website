@@ -11,4 +11,4 @@ function createAndSetStyles(elment: HTMLElement = document.createElement("p"), s
 
 // console.log(createAndSetStyles(undefined, `hello world, it works`))
 
-export { createAndSetStyles };
+export { createAndSetStyles }

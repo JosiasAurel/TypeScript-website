@@ -54,8 +54,32 @@ header.style.display = "flex";
 header.style.flexDirection = "row";
 header.style.justifyContent = "space-between";
 header.style.alignItems = "center";
+var mainSection = document.createElement("section");
+mainSection.style.display = "flex";
+mainSection.style.flexDirection = "column";
+mainSection.style.justifyContent = "center";
+mainSection.style.alignItems = "center";
+// main presentation on the body
+var main = document.createElement("main");
+main.style.display = "flex";
+main.style.flexDirection = "column";
+main.style.justifyContent = "space-evenly";
+main.style.alignItems = "center";
+main.style.margin = "4em 0 0 0";
+main.style.maxWidth = "600px";
+// main children
+var mainH1 = document.createElement("h1");
+mainH1.innerText = "TypeScript Rocks!!";
+mainH1.style.textAlign = "center";
+var mainP = document.createElement("p");
+mainP.innerText = "This website is written entirely in TypeScript and compiled to JavaScript.";
+mainP.style.fontSize = "2em";
+mainP.style.textAlign = "center";
+var mainH2 = document.createElement("h2");
+main.appendChild(mainH1);
+main.appendChild(mainP);
+// add main element to mainSection
+mainSection.appendChild(main);
 // adding the created elements as children of body or so
 body.appendChild(header);
-/* import { createAndSetStyles } from "./utils";
-
-console.log(createAndSetStyles(undefined, `hello world, it works`)) */ 
+body.appendChild(mainSection);
