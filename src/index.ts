@@ -24,7 +24,7 @@ function initializeApp(): void {
 
 initializeApp();
 
-function HomePage() {
+function HomePage(): void {
     
 
 // create the website header
@@ -46,10 +46,12 @@ homeAnchor.innerText = "Home";
 homeAnchor.style.textDecoration = "underline";
 homeAnchor.style.color = "white";
 let aboutAnchor: HTMLAnchorElement = document.createElement("a");
-aboutAnchor.innerText = "About";
+aboutAnchor.innerText = "ShowImage";
 aboutAnchor.style.textDecoration = "underline";
 aboutAnchor.style.color = "white";
 aboutAnchor.style.marginLeft = "1em";
+
+aboutAnchor.addEventListener("click", showCoolImage)
 
 // add nav children
 nav.appendChild(homeAnchor);
@@ -264,7 +266,8 @@ footer.style.justifyContent = "center";
 
 // footer children
 let copy: HTMLParagraphElement = document.createElement("p");
-copy.innerText = `Welcome buddy, no strings attached. Happy ${daysMap[currentDay]}, ${currentDate} ${monthsMap[currentMonth]} ${currentYear}`;
+copy.innerHTML = `Welcome buddy, no strings attached. Happy ${daysMap[currentDay]}, ${currentDate} ${monthsMap[currentMonth]} ${currentYear}. <br /> Josias Aurel.`;
+copy.style.textAlign = "center";
 footer.appendChild(copy);
 
 // adding the created elements as children of body or so
@@ -274,6 +277,28 @@ body.appendChild(techSectionContainer);
 body.appendChild(footer);
 
 
+}
+
+
+
+// some other page function to replace body children with a large image
+
+function showCoolImage(): void {
+
+    let newBody: HTMLDivElement = document.createElement("div");
+    newBody.style.width = "100vw";
+    newBody.style.height = "100vh";
+    newBody.style.zIndex = "20";
+    newBody.style.position = "fixed";
+    newBody.style.top = "0";
+
+    // the image container
+    let image: HTMLImageElement = document.createElement("img");
+    image.src = "./assets/plant.jpeg";
+    image.style.maxWidth = "300px";
+    
+    newBody.appendChild(image);
+    body.appendChild(newBody);
 }
 
 HomePage();
