@@ -95,11 +95,6 @@ techSection.style.gridTemplateRows = "1fr 1fr";
 // i want to make 4 tech cards listing the tech i used
 // first tech card
 var techCard = document.createElement("div");
-techCard.style.display = "flex";
-techCard.style.alignItems = "center";
-techCard.style.backgroundColor = "#9319d86e";
-techCard.style.borderRadius = "6px";
-techCard.style.maxWidth = "250px";
 // children of techCard
 var span = document.createElement("span");
 // spanChild
@@ -113,66 +108,67 @@ techCard.appendChild(span);
 techCard.appendChild(techP);
 // second tech card
 var techCard2 = document.createElement("div");
-techCard2.style.display = "flex";
-techCard2.style.alignItems = "center";
-techCard2.style.backgroundColor = "#9319d86e";
-techCard2.style.borderRadius = "6px";
-techCard2.style.maxWidth = "250px";
 // children of techCard2
-var span = document.createElement("span");
+var span_ = document.createElement("span");
 // spanChild
-var spanH2 = document.createElement("h2");
-spanH2.innerText = "NodeJS";
-var techP = document.createElement("p");
-techP.innerText = "NodeJS";
-techP.style.margin = "0 0 0 1em";
-span.appendChild(spanH2);
-techCard2.appendChild(span);
-techCard2.appendChild(techP);
+var spanH2_ = document.createElement("h2");
+spanH2_.innerText = "NodeJS";
+var techP_ = document.createElement("p");
+techP_.innerText = "NodeJS";
+techP_.style.margin = "0 0 0 1em";
+span_.appendChild(spanH2_);
+techCard2.appendChild(span_);
+techCard2.appendChild(techP_);
 // third tech card
 var techCard3 = document.createElement("div");
-techCard3.style.display = "flex";
-techCard3.style.alignItems = "center";
-techCard3.style.backgroundColor = "#9319d86e";
-techCard3.style.borderRadius = "6px";
-techCard3.style.maxWidth = "250px";
 // children of techCard3
-var span = document.createElement("span");
+var span__ = document.createElement("span");
 // spanChild
-var spanH2 = document.createElement("h2");
-spanH2.innerText = "HTML";
-var techP = document.createElement("p");
-techP.innerText = "HTML";
-techP.style.margin = "0 0 0 1em";
-span.appendChild(spanH2);
-techCard3.appendChild(span);
-techCard3.appendChild(techP);
+var spanH2__ = document.createElement("h2");
+spanH2__.innerText = "HTML";
+var techP__ = document.createElement("p");
+techP__.innerText = "HTML";
+techP__.style.margin = "0 0 0 1em";
+span__.appendChild(spanH2__);
+techCard3.appendChild(span__);
+techCard3.appendChild(techP__);
 // fourth tech card
 var techCard4 = document.createElement("div");
-techCard4.style.display = "flex";
-techCard4.style.alignItems = "center";
-techCard4.style.backgroundColor = "#9319d86e";
-techCard4.style.borderRadius = "6px";
-techCard4.style.maxWidth = "250px";
 // children of techCard4
-var span = document.createElement("span");
+var span___ = document.createElement("span");
 // spanChild
-var spanH2 = document.createElement("h2");
-spanH2.innerText = "JS";
-var techP = document.createElement("p");
-techP.innerText = "JavaScript";
-techP.style.margin = "0 0 0 1em";
-span.appendChild(spanH2);
-techCard4.appendChild(span);
-techCard4.appendChild(techP);
+var spanH2___ = document.createElement("h2");
+spanH2___.innerText = "JS";
+var techP___ = document.createElement("p");
+techP___.innerText = "JavaScript";
+techP___.style.margin = "0 0 0 1em";
+span___.appendChild(spanH2___);
+techCard4.appendChild(span___);
+techCard4.appendChild(techP___);
 // children of tech section
 techSection.appendChild(techCard);
 techSection.appendChild(techCard2);
 techSection.appendChild(techCard3);
 techSection.appendChild(techCard4);
-[techCard, techCard2, techCard3, techCard4].forEach(function (tc) {
+var techCards = [techCard, techCard2, techCard3, techCard4];
+techCards.forEach(function (tc) {
     tc.style.margin = "2em";
     tc.style.padding = "1em";
+    tc.style.display = "flex";
+    tc.style.alignItems = "center";
+    tc.style.backgroundColor = "#9319d86e";
+    tc.style.borderRadius = "6px";
+    tc.style.maxWidth = "250px";
+});
+[span, span_, span__, span___].forEach(function (sp) {
+    sp.style.padding = "1em";
+    sp.style.backgroundColor = "#452af1b0";
+    sp.style.borderRadius = "6px";
+    sp.style.width = "50px";
+    sp.style.height = "50px";
+    sp.style.display = "flex";
+    sp.style.alignItems = "center";
+    sp.style.justifyContent = "center";
 });
 techSectionContainer.appendChild(techSection);
 // adding the created elements as children of body or so

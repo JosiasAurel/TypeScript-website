@@ -128,11 +128,6 @@ techSection.style.gridTemplateRows = "1fr 1fr";
 
 // first tech card
 let techCard: HTMLDivElement = document.createElement("div");
-techCard.style.display = "flex";
-techCard.style.alignItems = "center";
-techCard.style.backgroundColor = "#9319d86e";
-techCard.style.borderRadius = "6px";
-techCard.style.maxWidth = "250px";
 
 // children of techCard
 let span: HTMLSpanElement = document.createElement("span");
@@ -150,69 +145,54 @@ techCard.appendChild(techP);
 
 // second tech card
 let techCard2: HTMLDivElement = document.createElement("div");
-techCard2.style.display = "flex";
-techCard2.style.alignItems = "center";
-techCard2.style.backgroundColor = "#9319d86e";
-techCard2.style.borderRadius = "6px";
-techCard2.style.maxWidth = "250px";
 
 // children of techCard2
-let span: HTMLSpanElement = document.createElement("span");
+let span_: HTMLSpanElement = document.createElement("span");
 // spanChild
-let spanH2: HTMLHeadingElement = document.createElement("h2");
-spanH2.innerText = "NodeJS"
-let techP: HTMLParagraphElement = document.createElement("p");
-techP.innerText = "NodeJS";
-techP.style.margin = "0 0 0 1em";
+let spanH2_: HTMLHeadingElement = document.createElement("h2");
+spanH2_.innerText = "NodeJS"
+let techP_: HTMLParagraphElement = document.createElement("p");
+techP_.innerText = "NodeJS";
+techP_.style.margin = "0 0 0 1em";
 
-span.appendChild(spanH2);
-techCard2.appendChild(span);
+span_.appendChild(spanH2_);
+techCard2.appendChild(span_);
 
-techCard2.appendChild(techP);
+techCard2.appendChild(techP_);
 
 // third tech card
 let techCard3: HTMLDivElement = document.createElement("div");
-techCard3.style.display = "flex";
-techCard3.style.alignItems = "center";
-techCard3.style.backgroundColor = "#9319d86e";
-techCard3.style.borderRadius = "6px";
-techCard3.style.maxWidth = "250px";
 
 // children of techCard3
-let span: HTMLSpanElement = document.createElement("span");
+let span__: HTMLSpanElement = document.createElement("span");
 // spanChild
-let spanH2: HTMLHeadingElement = document.createElement("h2");
-spanH2.innerText = "HTML"
-let techP: HTMLParagraphElement = document.createElement("p");
-techP.innerText = "HTML";
-techP.style.margin = "0 0 0 1em";
+let spanH2__: HTMLHeadingElement = document.createElement("h2");
+spanH2__.innerText = "HTML"
+let techP__: HTMLParagraphElement = document.createElement("p");
+techP__.innerText = "HTML";
+techP__.style.margin = "0 0 0 1em";
 
-span.appendChild(spanH2);
-techCard3.appendChild(span);
+span__.appendChild(spanH2__);
+techCard3.appendChild(span__);
 
-techCard3.appendChild(techP);
+techCard3.appendChild(techP__);
 
 // fourth tech card
 let techCard4: HTMLDivElement = document.createElement("div");
-techCard4.style.display = "flex";
-techCard4.style.alignItems = "center";
-techCard4.style.backgroundColor = "#9319d86e";
-techCard4.style.borderRadius = "6px";
-techCard4.style.maxWidth = "250px";
 
 // children of techCard4
-let span: HTMLSpanElement = document.createElement("span");
+let span___: HTMLSpanElement = document.createElement("span");
 // spanChild
-let spanH2: HTMLHeadingElement = document.createElement("h2");
-spanH2.innerText = "JS"
-let techP: HTMLParagraphElement = document.createElement("p");
-techP.innerText = "JavaScript";
-techP.style.margin = "0 0 0 1em";
+let spanH2___: HTMLHeadingElement = document.createElement("h2");
+spanH2___.innerText = "JS"
+let techP___: HTMLParagraphElement = document.createElement("p");
+techP___.innerText = "JavaScript";
+techP___.style.margin = "0 0 0 1em";
 
-span.appendChild(spanH2);
-techCard4.appendChild(span);
+span___.appendChild(spanH2___);
+techCard4.appendChild(span___);
 
-techCard4.appendChild(techP);
+techCard4.appendChild(techP___);
 
 // children of tech section
 techSection.appendChild(techCard);
@@ -220,9 +200,26 @@ techSection.appendChild(techCard2);
 techSection.appendChild(techCard3);
 techSection.appendChild(techCard4);
 
-[techCard, techCard2, techCard3, techCard4].forEach(tc => {
+let techCards = [techCard, techCard2, techCard3, techCard4];
+techCards.forEach(tc => {
     tc.style.margin = "2em";
     tc.style.padding = "1em";
+    tc.style.display = "flex";
+    tc.style.alignItems = "center";
+    tc.style.backgroundColor = "#9319d86e";
+    tc.style.borderRadius = "6px";
+    tc.style.maxWidth = "250px";
+});
+
+[span, span_, span__, span___].forEach(sp => {
+    sp.style.padding = "1em";
+    sp.style.backgroundColor = "#452af1b0";
+    sp.style.borderRadius = "6px";
+    sp.style.width = "50px";
+    sp.style.height = "50px";
+    sp.style.display = "flex";
+    sp.style.alignItems = "center";
+    sp.style.justifyContent = "center";
 })
 
 techSectionContainer.appendChild(techSection);
