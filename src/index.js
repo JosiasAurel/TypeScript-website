@@ -8,3 +8,7 @@ head.appendChild(title);
 // document body
 var body = document.getElementsByTagName("body")[0];
 // console.log(body);
+// create the website header
+var header = document.createElement("header");
+header.innerText = "Hello world";
+body.appendChild(header);
