@@ -84,7 +84,16 @@ main.appendChild(mainP);
 main.appendChild(mainH2);
 // add main element to mainSection
 mainSection.appendChild(main);
+var techSectionContainer = document.createElement("div");
+techSectionContainer.style.display = "flex";
+techSectionContainer.style.justifyContent = "center";
+techSectionContainer.style.alignItems = "center";
 var techSection = document.createElement("section");
+techSection.style.display = "grid";
+techSection.style.gridTemplateColumns = "1fr 1fr";
+techSection.style.gridTemplateRows = "1fr 1fr";
+// i want to make 4 tech cards listing the tech i used
+// first tech card
 var techCard = document.createElement("div");
 techCard.style.display = "flex";
 techCard.style.alignItems = "center";
@@ -102,9 +111,71 @@ techP.style.margin = "0 0 0 1em";
 span.appendChild(spanH2);
 techCard.appendChild(span);
 techCard.appendChild(techP);
+// second tech card
+var techCard2 = document.createElement("div");
+techCard2.style.display = "flex";
+techCard2.style.alignItems = "center";
+techCard2.style.backgroundColor = "#9319d86e";
+techCard2.style.borderRadius = "6px";
+techCard2.style.maxWidth = "250px";
+// children of techCard2
+var span = document.createElement("span");
+// spanChild
+var spanH2 = document.createElement("h2");
+spanH2.innerText = "NodeJS";
+var techP = document.createElement("p");
+techP.innerText = "NodeJS";
+techP.style.margin = "0 0 0 1em";
+span.appendChild(spanH2);
+techCard2.appendChild(span);
+techCard2.appendChild(techP);
+// third tech card
+var techCard3 = document.createElement("div");
+techCard3.style.display = "flex";
+techCard3.style.alignItems = "center";
+techCard3.style.backgroundColor = "#9319d86e";
+techCard3.style.borderRadius = "6px";
+techCard3.style.maxWidth = "250px";
+// children of techCard3
+var span = document.createElement("span");
+// spanChild
+var spanH2 = document.createElement("h2");
+spanH2.innerText = "HTML";
+var techP = document.createElement("p");
+techP.innerText = "HTML";
+techP.style.margin = "0 0 0 1em";
+span.appendChild(spanH2);
+techCard3.appendChild(span);
+techCard3.appendChild(techP);
+// fourth tech card
+var techCard4 = document.createElement("div");
+techCard4.style.display = "flex";
+techCard4.style.alignItems = "center";
+techCard4.style.backgroundColor = "#9319d86e";
+techCard4.style.borderRadius = "6px";
+techCard4.style.maxWidth = "250px";
+// children of techCard4
+var span = document.createElement("span");
+// spanChild
+var spanH2 = document.createElement("h2");
+spanH2.innerText = "JS";
+var techP = document.createElement("p");
+techP.innerText = "JavaScript";
+techP.style.margin = "0 0 0 1em";
+span.appendChild(spanH2);
+techCard4.appendChild(span);
+techCard4.appendChild(techP);
 // children of tech section
 techSection.appendChild(techCard);
+techSection.appendChild(techCard2);
+techSection.appendChild(techCard3);
+techSection.appendChild(techCard4);
+[techCard, techCard2, techCard3, techCard4].forEach(function (tc) {
+    tc.style.margin = "2em";
+    tc.style.padding = "1em";
+});
+techSectionContainer.appendChild(techSection);
 // adding the created elements as children of body or so
 body.appendChild(header);
 body.appendChild(mainSection);
-body.appendChild(techSection);
+body.appendChild(techSectionContainer);
