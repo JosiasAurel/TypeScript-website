@@ -1,0 +1,19 @@
+{
+  "name": "js-only-site",
+  "version": "1.0.0",
+  "description": "A website built entirely in TypeScript ",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "keywords": [
+    "website",
+    "pages",
+    "rendering"
+  ],
+  "author": "Josias Aurel",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript": "^4.3.2"
+  }
+}
