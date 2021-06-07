@@ -24,6 +24,8 @@ function initializeApp(): void {
 
 initializeApp();
 
+function HomePage() {
+    
 
 // create the website header
 
@@ -224,8 +226,54 @@ techCards.forEach(tc => {
 
 techSectionContainer.appendChild(techSection);
 
+// I want to tell you Happy monday/tuesday... depending on the day
+
+const daysMap: any = {
+    1: "Monday",
+    2: "Tuesday",
+    3: "Wednesday",
+    4: "Thursday",
+    5: "Friday",
+    6: "Saturday",
+    7: "Sunday"
+}
+
+const monthsMap: any = {
+    1: "January",
+    2: "February",
+    3: "March",
+    4: "April",
+    5: "May",
+    6: "June",
+    7: "July",
+    8: "August",
+    9: "September",
+    10: "October",
+    11: "November",
+    12: "December"
+}
+
+let currentDay: number = new Date().getDay();
+let currentYear: number = new Date().getFullYear();
+let currentDate: number = new Date().getDate();
+let currentMonth: number = new Date().getMonth();
+
+let footer: HTMLElement = document.createElement("footer");
+footer.style.display = "flex";
+footer.style.justifyContent = "center";
+
+// footer children
+let copy: HTMLParagraphElement = document.createElement("p");
+copy.innerText = `Welcome buddy, no strings attached. Happy ${daysMap[currentDay]}, ${currentDate} ${monthsMap[currentMonth]} ${currentYear}`;
+footer.appendChild(copy);
+
 // adding the created elements as children of body or so
 body.appendChild(header);
 body.appendChild(mainSection);
 body.appendChild(techSectionContainer);
+body.appendChild(footer);
 
+
+}
+
+HomePage();
